@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
-/// Typography system derived from theme.css + fonts.css (Inter via Google Fonts)
 abstract class AppTypography {
   // ── Font size scale (matches Tailwind defaults at base 16px) ─────────────────
   static const double textXs = 12.0;

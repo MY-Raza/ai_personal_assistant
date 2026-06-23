@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import '../core/theme/theme.dart';
 
-// TODO: Replace with go_router config once screen files are uploaded.
-// Placeholder keeps the project compilable at every conversion step.
-
 class App extends StatelessWidget {
   const App({super.key});
 
