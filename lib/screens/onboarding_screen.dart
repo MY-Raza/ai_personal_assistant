@@ -95,14 +95,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
             Expanded(
-              child: Padding(
+              child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 128,
-                      height: 128,
+                      width: 112,
+                      height: 112,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
@@ -118,9 +119,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ],
                       ),
-                      child: Icon(slide.icon, color: slide.iconColor, size: 48),
+                      child: Icon(slide.icon, color: slide.iconColor, size: 44),
                     ),
-                    const SizedBox(height: AppSpacing.s8),
+                    const SizedBox(height: 24),
                     Text(
                       slide.title,
                       style: const TextStyle(

@@ -141,7 +141,7 @@ class WeatherScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           SizedBox(
-            height: 86,
+            height: 92,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: _hourly.length,
@@ -151,18 +151,19 @@ class WeatherScreen extends StatelessWidget {
                 final isNow = h['time'] == 'Now';
                 return Container(
                   width: 56,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   decoration: BoxDecoration(
                     color: isNow ? const Color(0x406366F1) : Colors.white.withOpacity(0.04),
                     borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
                   ),
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('${h['time']}', style: const TextStyle(color: Color(0xFF94A3B8), fontSize: 10, fontWeight: FontWeight.w500)),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 4),
                       Text('${h['icon']}', style: const TextStyle(fontSize: 18)),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 4),
                       Text('${h['temp']}°', style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700)),
                     ],
                   ),
