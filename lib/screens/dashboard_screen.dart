@@ -78,7 +78,11 @@ class DashboardScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              IconActionButton(icon: Icons.notifications_outlined, badge: true),
+              IconActionButton(
+                icon: Icons.notifications_outlined,
+                badge: true,
+                onPressed: () => GoRouter.of(context).push('/notifications'),
+              ),
               const SizedBox(width: 8),
               IconActionButton(
                 icon: Icons.settings_outlined,
